@@ -2,7 +2,7 @@ body {
     background: url("https://s3.amazonaws.com/Smashing-Boxes/scanline.png");
     width: 320px;
     height: 500px;
-    margin: 40px auto;
+    margin: 10px auto;
     font: 14px/1.5em Helvetica, Arial, sans-serif;
 }
 
@@ -34,7 +34,7 @@ input[type="submit"] {
     text-indent: -10px;
     text-transform: uppercase;
     -webkit-transition: 0.1s all linear;
-
+    -webkit-appearance: none;
   &:active {
       box-shadow: 0 0px 0 #370a0a, inset 0 1px 0 #eb7575, inset 0 -1px 0 #335;
       bottom: 50px;
