@@ -2,42 +2,67 @@ body {
     background: url("https://s3.amazonaws.com/Smashing-Boxes/scanline.png");
     width: 320px;
     height: 500px;
-    margin: 10px auto;
+    margin: 0 auto;
     font: 14px/1.5em Helvetica, Arial, sans-serif;
 }
 
 form {
-    background: url("https://s3.amazonaws.com/Smashing-Boxes/bg.png") 50% 50% no-repeat;
+    background: url("https://s3.amazonaws.com/Smashing-Boxes/bg.png") 50% 0 no-repeat;
     height: 500px;
     position: relative;
 }
 
 input[type="submit"] {
     
-    background: #8d1515;
-    border: 1px solid #8d1515;
+    background: #e73332;
+    
+    background-image: -webkit-linear-gradient(#ea3434, #8d1515);
+    background-image: -moz-linear-gradient(#ea3434, #8d1515);
+    background-image: linear-gradient(#ea3434, #8d1515);
+    
+    border: 1px solid #8D1515;
+    
     color: white;
     cursor: pointer;
+    display: block;
+    
     height: 150px;
-    width: 75%;
-    font: bold 60px/1em "Century Gothic","proxima-nova", Frutiger,"Frutiger Linotype",Univers,Calibri,"Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
     padding: 50px;
-    text-shadow: 0px 1px 2px #222;
-    background-image: -webkit-linear-gradient(#ea3434,#8d1515);
-    box-shadow: 0 10px 0 #370a0a, inset 0 1px 0 #eb7575, inset 0 -1px 0 #335;
+    width: 75%;
+    
+    font: bold 60px/1em "Century Gothic","proxima-nova",Frutiger,"Frutiger Linotype",Univers,Calibri,"Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+    text-shadow: 0px 1px 2px #222, 0 0 80px orange;
+    
+    -webkit-box-shadow: 0 10px 0 #370a0a,inset 0 1px 0 #eb7575,inset 0 -1px 0 #335, 0 0 40px red, 0 10px 30px red;
+    -moz-box-shadow: 0 10px 0 #370a0a,inset 0 1px 0 #eb7575,inset 0 -1px 0 #335, 0 0 40px red, 0 10px 30px red;
+    box-shadow: 0 10px 0 #370a0a,inset 0 1px 0 #eb7575,inset 0 -1px 0 #335, 0 0 40px red, 0 10px 30px red;
+    
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
+    
     position: absolute;
-    bottom: 60px;
+    bottom: 80px;
     left: 50%;
+    
     margin-left: -120px;
+    
     text-align: left;
-    text-indent: -10px;
+    text-indent: -15px;
     text-transform: uppercase;
+    
     -webkit-transition: 0.1s all linear;
-    -webkit-appearance: none;
-  &:active {
-      box-shadow: 0 0px 0 #370a0a, inset 0 1px 0 #eb7575, inset 0 -1px 0 #335;
-      bottom: 50px;
-  }
+    -moz-transition: 0.1s all linear;
+    transition: 0.1s all linear;
+    
+    -webkit-appearance: none;  
+  
+    &:active, &:focus {
+        -webkit-box-shadow: 0 0px 0 #370a0a, inset 0 1px 10px #000, inset 0 1px 0 #eb7575, inset 0 -1px 0 #335;
+        -moz-box-shadow: 0 0px 0 #370a0a, inset 0 1px 10px #000, inset 0 1px 0 #eb7575, inset 0 -1px 0 #335;
+        box-shadow: 0 0px 0 #370a0a, inset 0 1px 10px #000, inset 0 1px 0 #eb7575, inset 0 -1px 0 #335;
+        bottom: 70px;
+    }
   
 }
