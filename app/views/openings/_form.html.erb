@@ -1,0 +1,6 @@
+<%= form_for(@opening) do |f| %>
+  <div class="actions">
+    <%= f.submit "Open" %>
+  </div>
+  <%= f.hidden_field :opened_by, :value => @current_user.name %>
+<% end %>

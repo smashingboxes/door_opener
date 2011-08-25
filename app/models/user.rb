@@ -1,4 +1,12 @@
-class User < ActiveRecord::Base
+class User
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :provider
+  field :uid
+  field :name
+  attr_accessible :provider, :uid, :name
+  
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]

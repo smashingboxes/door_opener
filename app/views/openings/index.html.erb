@@ -1,0 +1,12 @@
+<h1>Who opened the door?</h1>
+
+<ul>
+  
+<% @openings.each do |opening| %>
+  <li><%= opening.opened_by %> opened the door on <%= opening.created_at.strftime("%m/%d/%Y at %I:%M:%p") %></li>
+<% end %>
+</ul>
+
+<br />
+
+<%= link_to 'Open the door', new_opening_path %>

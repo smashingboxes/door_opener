@@ -1,6 +1,6 @@
 Dooropener::Application.routes.draw do
-  get "welcome/home"
-  post "welcome/open_door"
+  resources :openings
+
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   # The priority is based upon order of creation:
@@ -52,7 +52,7 @@ Dooropener::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#home'
+  root :to => "openings#new"
 
   # See how all your routes lay out with "rake routes"
 
