@@ -3,7 +3,7 @@
 <ul>
   
 <% @openings.each do |opening| %>
-  <li><%= opening.opened_by %> opened the door on <%= opening.created_at.strftime("%m/%d/%Y at %I:%M:%p") %></li>
+  <li><%= opening.opened_by %> opened the door on <%= opening.created_at.strftime("%m/%d/%Y at %I:%M:%p") %> <%= link_to "See who came in", opening %></li>
 <% end %>
 </ul>
 

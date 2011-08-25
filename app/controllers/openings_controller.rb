@@ -43,6 +43,8 @@ class OpeningsController < ApplicationController
   def create
     @opening = Opening.new(params[:opening])
     system("/home/sb/bin/arduino-serial -b 9600 -p /dev/ttyUSB0 -s ,")
+    @opening.file_name = Time.now.strftime("%Y-%m-%d_%H-%M-%S-%p") + ".ogg"
+    system("ffmpeg -f video4linux2 -s 320x240 -t 10 -i /dev/video0 -r 24 #{Rails.root.to_s}/app/assets/videos/#{@opening.file_name}")
     respond_to do |format|
       if @opening.save
         format.html { redirect_to @opening, notice: 'Door was successfully opened' }
