@@ -42,7 +42,7 @@ class OpeningsController < ApplicationController
   # POST /openings.json
   def create
     @opening = Opening.new(params[:opening])
-
+    system("/home/sb/bin/arduino-serial -b 9600 -p /dev/ttyUSB0 -s ,")
     respond_to do |format|
       if @opening.save
         format.html { redirect_to @opening, notice: 'Door was successfully opened' }
